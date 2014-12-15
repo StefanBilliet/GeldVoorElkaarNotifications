@@ -1,0 +1,21 @@
+{
+  "name": "GeldVoorElkaarNotifications",
+  "version": "1.0.0",
+  "description": "Something that scrapes the Geld Voor Elkaar site for interesting offers",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Billiet",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "node-phantom": "^0.2.5",
+    "phantom": "^0.7.1",
+    "q": "^1.1.2"
+  }
+}
