@@ -19,13 +19,17 @@ module.exports = function ProjectRecordParser () {
       var classification = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_ClassificatieLabel").first().text();
       var graydonRating = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_GraydonRatingLabel").first().text();
       var creditAmount = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_BedragLabel").first().text();
+      var investedAmount = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_GeinvesteerdbedragLabel").first().text();
 
       return {
         projectName : projectName,
         loanGoal : loanGoal,
         classification : classification,
         graydonRating : graydonRating,
-        creditAmount : creditAmount
+        creditAmount : creditAmount,
+        investedAmount : investedAmount,
+        annualIntrest : "",
+        period : ""
       };
     });
 
