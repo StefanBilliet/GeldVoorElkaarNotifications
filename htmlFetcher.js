@@ -1,4 +1,4 @@
-var phantom = require('phantom');
+var request = require('request');
 var Q = require('q');
 
 module.exports = function HtmlFetcher () {
@@ -7,19 +7,12 @@ module.exports = function HtmlFetcher () {
   self.fetch = function fetch (url) {
     var deferred = Q.defer();
 
-    phantom.create(function (ph) {
-      ph.createPage(function (page) {
-        page.open(url, function (status) {
-           page.evaluate(function () {
-            var html = document.documentElement.outerHTML
-            return html
-
-           }, function (actualHtml) {
-            ph.exit();
-            deferred.resolve(actualHtml);
-          });
-        });
-      });
+    request(url, function (error, response, body) {debugger;
+      if (!error && response.statusCode == 200) {
+        deferred.resolve(body);
+      } else {
+        deferred.reject(error);
+      }
     });
 
     return deferred.promise;

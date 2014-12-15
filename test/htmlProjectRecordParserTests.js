@@ -1,3 +1,4 @@
+var should = require('chai').should();
 var fs = require('fs');
 var Q = require('q');
 var cheerio = require('cheerio');
