@@ -20,6 +20,8 @@ module.exports = function ProjectRecordParser () {
       var graydonRating = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_GraydonRatingLabel").first().text();
       var creditAmount = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_BedragLabel").first().text();
       var investedAmount = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_GeinvesteerdbedragLabel").first().text();
+      var annualIntrest = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_RenteLabel").first().text();
+      var period = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_LooptijdLabel").first().text();
 
       return {
         projectName : projectName,
@@ -28,8 +30,8 @@ module.exports = function ProjectRecordParser () {
         graydonRating : graydonRating,
         creditAmount : creditAmount,
         investedAmount : investedAmount,
-        annualIntrest : "",
-        period : ""
+        annualIntrest : annualIntrest,
+        period : period
       };
     });
 

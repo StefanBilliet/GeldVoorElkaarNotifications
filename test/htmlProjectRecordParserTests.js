@@ -15,7 +15,7 @@ describe('ProjectRecordParser', function () {
     sut = new ProjectRecordParser();
   });
 
-  describe('#parse()', function () {
+  describe('#parse()', function (done) {
     it('should parse project records from the html', function (done) {
       var expectedProjects = [{
         projectName : "Dutch Dragon Fireworks",
@@ -31,6 +31,8 @@ describe('ProjectRecordParser', function () {
       var actualRecords = sut.parse(projectsHtml);
 
       expectedProjects.should.deep.equal(actualRecords);
+
+      done();
     });
   })
 });
