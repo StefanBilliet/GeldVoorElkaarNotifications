@@ -16,11 +16,13 @@ module.exports = function ProjectRecordParser () {
 
       var projectName = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_ProjectNaamLabel").first().text();
       var loanGoal = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_LeendoelLabel").first().text();
+      var classification = htmlNode.find("#ctl00_ctl00_ctl00_ContentPlaceHolderDefault_MainContentPlaceHolder_ctl00_ProjectenFilter_4_Projectgegevens1_LeningRepeater_ctl" + projectIndex + "_ProjectInformatie1_ClassificatieLabel").first().text();
 
       debugger;
       return {
         projectName : projectName,
-        loanGoal : loanGoal
+        loanGoal : loanGoal,
+        classification : classification
       };
     });
 
