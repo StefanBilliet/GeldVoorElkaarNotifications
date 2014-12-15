@@ -1,7 +1,7 @@
 var phantom = require('phantom');
 var fs = require('fs');
 var Q = require('q');
-var fs_readFile = Q.denodeify(fs.readFile)
+var fs_readFile = Q.denodeify(fs.readFile);
 
 var should = require('chai').should();
 

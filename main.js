@@ -1,4 +1,4 @@
-var HtmlFetcher = require('./htmlFetcher');
+var HtmlFetcher = require('./HtmlFetcher');
 var Q = require('q');
 debugger;
 var fetcher = new HtmlFetcher();
